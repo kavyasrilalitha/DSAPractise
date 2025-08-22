@@ -1,0 +1,92 @@
+🚀 Python DSA Cheat Sheet
+📌 1. Arrays / Lists
+arr = [1, 2, 3]        # create
+arr.append(4)          # add
+arr.insert(1, 10)      # insert at index
+arr.pop()              # remove last
+arr.pop(1)             # remove at index
+arr.remove(2)          # remove by value
+arr[0]                 # access
+arr[1:3]               # slicing
+len(arr)               # length
+arr.sort()             # in-place sort
+sorted(arr)            # returns new sorted list
+
+📌 2. Strings
+s = "hello"
+s[0]                   # access char
+s[1:4]                 # substring
+len(s)                 # length
+s.upper(), s.lower()   # case
+s.split(",")           # split to list
+" ".join(["a","b"])    # join list to string
+s.strip()              # remove spaces
+s.replace("h","H")     # replace
+s[::-1]                # reverse
+
+📌 3. Dictionaries (Hash Maps)
+d = {"a": 1, "b": 2}
+d["a"]                 # access
+d.get("c", -1)         # safe access
+d["c"] = 3             # add/update
+d.pop("a")             # remove
+for k,v in d.items():  # iterate
+    print(k, v)
+
+📌 4. Sets
+s = {1, 2, 3}
+s.add(4)               # add
+s.remove(2)            # remove
+s.discard(5)           # safe remove
+1 in s                 # check membership
+s1 | s2                # union
+s1 & s2                # intersection
+s1 - s2                # difference
+
+📌 5. Stacks & Queues (using list / collections)
+stack = []             # stack (LIFO)
+stack.append(1)        # push
+stack.pop()            # pop
+
+from collections import deque
+queue = deque([1,2])
+queue.append(3)        # enqueue
+queue.popleft()        # dequeue
+
+📌 6. Classes (for Linked List, Trees, etc.)
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+class MyClass:
+    def __init__(self, x):
+        self.x = x
+    def show(self):
+        print(self.x)
+
+obj = MyClass(5)
+obj.show()
+
+📌 7. Common Shortcuts
+# List comprehension
+squares = [x*x for x in range(5)]
+
+# Dict comprehension
+d = {i: i*i for i in range(5)}
+
+# Enumerate with index
+for i, val in enumerate(arr):
+    print(i, val)
+
+# Zip two lists
+for a, b in zip([1,2], [3,4]):
+    print(a, b)
+
+# Any / All
+any(x > 0 for x in arr)
+all(x > 0 for x in arr)
+
+# Counter (frequency map)
+from collections import Counter
+freq = Counter("aabbc")
